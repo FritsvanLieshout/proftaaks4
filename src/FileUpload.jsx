@@ -11,7 +11,6 @@ class FileUpload extends Component {
       image: null,
       selectedFiles: undefined,
       currentFile: undefined,
-      isUploaded: false,
       files: [],
     };
 
@@ -77,8 +76,7 @@ class FileUpload extends Component {
       });
 
     this.setState({
-      selectedFiles: undefined,
-      isUploaded: true,
+      selectedFiles: undefined
     });
   }
 
@@ -89,8 +87,7 @@ class FileUpload extends Component {
       fullname,
       image,
       progress,
-      message,
-      isUploaded,
+      message
     } = this.state;
 
     return (
@@ -136,7 +133,7 @@ class FileUpload extends Component {
         <div className="container-form image">
           <h3>Personal Image</h3>
           <p>{fullname}</p>
-          <img src={image} />
+          <img src={image} alt="profile" />
         </div>
       </div>
     );
